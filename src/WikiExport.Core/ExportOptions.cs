@@ -13,11 +13,11 @@ namespace WikiExport
     {
         public ExportOptions()
         {
-            AutoHeader = true;
-            AutoLevel = true;
-            AppendixProcessing = true;
+            AutoHeader = false;
+            AutoLevel = false;
+            AppendixProcessing = false;
             AppendixHeadingLevel = 6;
-            TableOfContents = true;
+            TableOfContents = false;
             TitleFormat = "{project} {title}";
             Logging = LogLevel.Warning;
             FatalErrorLevel = LogLevel.Error;
@@ -85,13 +85,13 @@ namespace WikiExport
         /// <summary>
         /// Gets or sets whether we add a heading for each content file (except for the top-most file)
         /// </summary>
-        [Option('h', "autoheading", Default = true, Required = false, HelpText = "Whether we add a heading for each content file (except for the top-most file)")]
+        [Option('h', "autoheading", Default = false, Required = false, HelpText = "Whether we add a heading for each content file (except for the top-most file)")]
         public bool AutoHeader { get; set; }
 
         /// <summary>
         /// Gets or sets whether we add a heading for the including file (except for the top-most file)
         /// </summary>
-        [Option('l', "autolevel", Default = true, Required = false, HelpText = "Whether to adjust the markdown headings according to the nesting level")]
+        [Option('l', "autolevel", Default = false, Required = false, HelpText = "Whether to adjust the markdown headings according to the nesting level")]
         public bool AutoLevel { get; set; }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace WikiExport
         /// <summary>
         /// Gets or sets whether we automatically detect appendices in the wiki
         /// </summary>
-        [Option("appendix", Default = true, Required = false, HelpText = "Whether we automatically detect/process appendices")]
+        [Option("appendix", Default = false, Required = false, HelpText = "Whether we automatically detect/process appendices")]
         public bool AppendixProcessing { get; set; }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace WikiExport
         /// <summary>
         /// Gets or set whether we want a table of contents
         /// </summary>
-        [Option("toc", Default = true, Required = false, HelpText = "Whether we want a table of contents")]
+        [Option("toc", Default = false, Required = false, HelpText = "Whether we want a table of contents")]
         public bool TableOfContents { get; set; }
 
         /// <summary>
