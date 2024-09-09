@@ -4,7 +4,7 @@
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Description>Azure DevOps wiki export tool</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>wikiexport</ToolCommandName>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
